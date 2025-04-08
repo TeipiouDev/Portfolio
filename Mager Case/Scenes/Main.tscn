@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://biraaicii18og"]
+
+[ext_resource type="PackedScene" uid="uid://cdrd3vmrlwcid" path="res://Scenes/Player.tscn" id="1"]
+[ext_resource type="Script" path="res://Scripts/Camera2DPixelPerfect.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://tl8d30p364rk" path="res://Scenes/Boss.tscn" id="3"]
+[ext_resource type="Script" path="res://Scripts/Main.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://c016vxk1x6gpp" path="res://Scenes/BossHealthBar.tscn" id="5"]
+[ext_resource type="Texture2D" uid="uid://bb8ghn6bn4rfs" path="res://Sprites/Boss01.png" id="5_e4603"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_e4603")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Main" type="Node2D"]
+texture_filter = 1
+script = ExtResource("4")
+
+[node name="GameEnd" type="Label" parent="."]
+visible = false
+offset_left = 6.0
+offset_top = 75.0
+offset_right = 252.0
+offset_bottom = 153.0
+text = "The enemy has been defeated
+and the journey may continue...
+(game ends after 5 seconds)"
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(122.761, 208.032)
+speed = 128
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="SubViewport"]
+script = ExtResource("2")
+
+[node name="Boss" parent="." instance=ExtResource("3")]
+position = Vector2(128, 32)
+
+[node name="AnimatedSprite2D" parent="Boss" index="0"]
+sprite_frames = SubResource("1")
+
+[node name="BossHealthBar" parent="." instance=ExtResource("5")]
+offset_left = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[node name="TextureProgressBar" parent="BossHealthBar" index="0"]
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 259.0
+offset_bottom = 7.0
+
+[node name="HBoxContainer" parent="BossHealthBar" index="1"]
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 255.0
+offset_bottom = 16.0
+
+[connection signal="boss_defeated" from="Boss" to="." method="_on_boss_boss_defeated"]
+[connection signal="pattern_changed" from="Boss/PatternMachine" to="BossHealthBar" method="_on_PatternMachine_pattern_changed"]
+
+[editable path="Boss"]
+[editable path="BossHealthBar"]

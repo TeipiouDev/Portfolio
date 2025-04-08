@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/PatternMarker.png" type="Texture2D" id=1]
+
+[node name="NinePatchRect" type="NinePatchRect"]
+offset_right = 8.0
+offset_bottom = 8.0
+custom_minimum_size = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+region_rect = Rect2( 1, 1, 6, 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

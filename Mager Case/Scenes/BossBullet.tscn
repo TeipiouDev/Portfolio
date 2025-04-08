@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://doov50j47w7fd"]
+
+[ext_resource type="Texture2D" uid="uid://dvyvmesqwk07w" path="res://Sprites/BossBullet01.png" id="1"]
+[ext_resource type="Script" path="res://Scripts/BossBullet.gd" id="2"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="2"]
+
+[node name="BossBullet" type="CharacterBody2D" groups=["boss_bullets"]]
+collision_layer = 8
+script = ExtResource("2")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(-0.199999, 0.2)
+shape = SubResource("2")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(0.4, 0.36)
+
+[node name="MovementScript" type="Node" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

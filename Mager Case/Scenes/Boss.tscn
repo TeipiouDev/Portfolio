@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://tl8d30p364rk"]
+
+[ext_resource type="Texture2D" uid="uid://bb8ghn6bn4rfs" path="res://Sprites/Boss01.png" id="1"]
+[ext_resource type="Script" path="res://Scripts/Boss.gd" id="2"]
+[ext_resource type="Script" path="res://Scripts/PatternMachine.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://bo6lrgtdu7dw8" path="res://Sprites/BossOption.png" id="4"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(20, 26)
+
+[node name="Boss" type="Area2D"]
+texture_filter = 1
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("2")
+health = 1500
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+position = Vector2(1.19209e-07, 2.38419e-07)
+scale = Vector2(0.599999, 1)
+shape = SubResource("2")
+
+[node name="PatternMachine" type="Node2D" parent="."]
+script = ExtResource("3")
+
+[node name="InvulTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="MoveTimer" type="Timer" parent="."]
+
+[node name="Spawner" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Spawner"]
+texture_filter = 1
+position = Vector2(30, 0)
+texture = ExtResource("4")
+
+[node name="Sprite2" type="Sprite2D" parent="Spawner"]
+position = Vector2(-30, 0)
+texture = ExtResource("4")
+
+[connection signal="body_entered" from="." to="." method="_on_Boss_body_entered"]
+[connection signal="pattern_changed" from="PatternMachine" to="." method="_on_PatternMachine_pattern_changed"]
