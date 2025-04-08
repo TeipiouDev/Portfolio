@@ -18,7 +18,7 @@ namespace NESCHRVisualizer
             if (args.Length == 0)
             {
                 Console.WriteLine("Tiedostoja ei annettu, anna vähintään yksi NES ROM-tiedosto!");
-                Console.WriteLine("Esimerkki: NESCHRVisualizer \"Final Fantasy.nes\" ");
+                Console.WriteLine("Esimerkki: NESCHRVisualizer \"Oma NES Peli.nes\" ");
                 Environment.Exit(1);
             }
 
