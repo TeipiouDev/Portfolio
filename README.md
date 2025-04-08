@@ -15,7 +15,7 @@ Pelinkehityshaaste-kurssin pienimuotoinen peliprojekti, jonka aiheena oli Demake
 Koska minulla ei ole varsinaisesti mitään suuria projekteja, niin listaan tähän parit pienemmät tuotokset, joista olen tykännyt vuosien aikana.
 
 ### NES-konsolin ROM-tiedoston CHR-datan visualisointi
-NES-konsolin pelien ROM-tiedoston kuvadata toimii 16 tavun ryppäissä, joita voidaan lukea suoraan kuvatiedostoksi. Tein pienen komentoriviohjelman, joka tulostaa minkä tahansa iNES-formaattia olevan NES-pelin ROM-tiedoston kuvana siten, että jokainen 16 tavun rypäs luetaan niin kuin se olisi NES-sprite. Lähdekoodi ja tarkempaa tietoa löytyy kansiosta: PLACEHOLDER
+NES-konsolin pelien ROM-tiedoston kuvadata toimii 16 tavun ryppäissä, joita voidaan lukea suoraan kuvatiedostoksi. Tein pienen komentoriviohjelman, joka tulostaa minkä tahansa iNES-formaattia olevan NES-pelin ROM-tiedoston kuvana siten, että jokainen 16 tavun rypäs luetaan niin kuin se olisi NES-sprite. Lähdekoodi ja tarkempaa tietoa löytyy kansiosta: https://github.com/TeipiouDev/Portfolio/tree/main/NES%20CHR%20Visualizer
 
 ### Umineko visual novellin skriptin läpikäynti
 Umineko no naku koro ni on japanilainen visual novel, jonka sisäinen skripti-tiedosto löytyi aikoinaan jostain GitHubin uumenista. Kyseinen tiedosto sisälsi koko pelin kaiken tekstin ja koodin sekä japaniksi, että englanniksi. Tein pienen ohjelman, joka käy läpi koko skripti-tiedoston, erottelee sen pelin kahdeksaan eri lukuun erotellen kaikki pelin tekstit erikseen japaniksi ja englanniksi, tai vaihtoehtoisesti yhdistää ne siististi luettavaan muotoon. Lähdekoodi ja tarkempaa tietoa löytyy kansiosta: PLACEHOLDER
