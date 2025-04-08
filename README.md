@@ -9,7 +9,7 @@ Aineopintojen projektityö kurssin tuotos, jossa tehtiin web-sovellus hyödyntä
 Syventävän peliprojektin tuotos, joka tehtiin yhteistyössä musiikin laitoksen kanssa. Viiden hengen tiimimme teki Unityllä 2D-tasoloikkahiiviskelypeliä. Tämän projektin aikana olin apulaiskoodarina. Projektin GitHub-sivu löytyy täältä: https://github.com/kilimato/MusiqueNoir
 
 ### Mager Case
-Pelinkehityshaaste-kurssin pienimuotoinen peliprojekti, jonka aiheena oli Demake. Ideana oli tehdä jossain määrin yksinkertaistettu versio jostakin genrestä tai pelistä, ja otin aiheeksi itselleni rakkaat bullet hellit. Samalla aloin käyttämään projektin tekemiseen siihen aikaan vähemmän tunnettua Godot Engineä. Projektin lähdekoodi ja tarkempi esittely löytyy kansiosta: PLACEHOLDER 
+Pelinkehityshaaste-kurssin pienimuotoinen peliprojekti, jonka aiheena oli Demake. Ideana oli tehdä jossain määrin yksinkertaistettu versio jostakin genrestä tai pelistä, ja otin aiheeksi itselleni rakkaat bullet hellit. Samalla aloin käyttämään projektin tekemiseen siihen aikaan vähemmän tunnettua Godot Engineä. Projektin lähdekoodi ja tarkempi esittely löytyy kansiosta: https://github.com/TeipiouDev/Portfolio/tree/main/Mager%20Case
 
 ## Pieniä harrasteprojekteja
 Koska minulla ei ole varsinaisesti mitään suuria projekteja, niin listaan tähän parit pienemmät tuotokset, joista olen tykännyt vuosien aikana.
